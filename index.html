@@ -11,12 +11,12 @@
 <body>
 <header>
   <section class="bg-black flex pt-10 ">
-    <img class="bg-cover w-3/12" src="./photos/Group 12.png" alt="">
+    <img class="bg-cover w-3/12 " src="./photos/Group 12.png" alt="">
     <div class="text-center flex flex-col justify-center" >
       <h1 class="text-red-500 text-6xl font-serif font-bold my-3 ">BUILD YOUR DREAM PSG TEAM</h1>
       <p class="text-white italic text-base">Paris Saint-Germain is an Iconic Global Football Club that boasts of great legacy, legendary players and extensive media coverage.</p>
     </div>
-      <img class="bg-cover w-3/12" src="./photos/afterBackgroundremove.png" alt="">
+      <img class="bg-cover w-3/12 " src="./photos/afterBackgroundremove.png" alt="">
   </section>
 </header>
 <main class="bg-slate-900 flex justify-center pb-16">
@@ -25,29 +25,27 @@
   <div class="w-9/12">
     <!-- main div  -->
     <div class="flex justify-center gap-x-3">
-
       <div class="flex flex-col justify-center items-center bg-black gap-y-3 pb-5 border border-slate-300 ">
         <img src="./photos/Rectangle 144 (1).jpg" alt="">
         <h1 class="text-white text-lg text-2xl font-bold">Lionel Messi</h1>
         <p class="text-gray-400 text-sm">36 Goals . 120 Assist</p>
-        <button class="text-white bg-red-500 px-12 py-1 hover:text-black">SELECT</button>
+        <button class="text-white bg-red-500 px-12 py-1 hover:text-black" onclick="selectedPlayer(this)">SELECT</button>
       </div>
       <div class="flex flex-col justify-center items-center bg-black gap-y-3 pb-5 border border-slate-300">
         <img src="./photos/Rectangle 144 (4).jpg" alt="">
         <h1 class="text-white text-lg text-2xl font-bold">Neymar Jr</h1>
         <p class="text-gray-400 text-sm">36 Goals . 120 Assist</p>
-        <button class="text-white bg-red-500 px-12 py-1 hover:text-black">SELECT</button>
+        <button onclick="selectedPlayer(this)" class="text-white bg-red-500 px-12 py-1 hover:text-black">SELECT</button>
       </div>
       <div class="flex flex-col justify-center items-center bg-black gap-y-3 pb-5 border border-slate-300">
         <img src="./photos/Rectangle 144 (5).jpg" alt="">
         <h1 class="text-white text-lg text-2xl font-bold">Kylian Mbappé</h1>
         <p class="text-gray-400 text-sm">36 Goals . 120 Assist</p>
-        <button class="text-white bg-red-500 px-12 py-1 hover:text-black">SELECT</button>
+        <button onclick="selectedPlayer(this)" class="text-white bg-red-500 px-12 py-1 hover:text-black">SELECT</button>
       </div>
-
     </div>
-    <div class="flex justify-center gap-x-3 mt-5">
 
+    <div class="flex justify-center gap-x-3 mt-5">
       <div class="flex flex-col justify-center items-center bg-black gap-y-3 pb-5 border border-slate-300 ">
         <img src="./photos/Rectangle 144 (7).jpg" alt="">
         <h1 class="text-white text-lg text-2xl font-bold">Vítor Machado</h1>
@@ -66,10 +64,9 @@
         <p class="text-gray-400 text-sm">36 Goals . 120 Assist</p>
         <button class="text-white bg-red-500 px-12 py-1 hover:text-black">SELECT</button>
       </div>
-
     </div>
-    <div class="flex justify-center gap-x-3 mt-5">
 
+    <div class="flex justify-center gap-x-3 mt-5">
       <div class="flex flex-col justify-center items-center bg-black gap-y-3 pb-5 border border-slate-300 ">
         <img src="./photos/marcoverattipsgvrealmadriducl2022264x204.jpg" alt="">
         <h1 class="text-white text-lg text-2xl font-bold">Marco Verratti</h1>
@@ -88,23 +85,24 @@
         <p class="text-gray-400 text-sm">36 Goals . 120 Assist</p>
         <button class="text-white bg-red-500 px-12 py-1 hover:text-black">SELECT</button>
       </div>
-
     </div>
+
   </div>
   <!-- card side div END  -->
   <!-- selection side div start -->
 
   <div class="w-3/12">
     <!-- list div start  -->
-    <div class="bg-black max-h-96 my-3 py-5">
-      <h1 class="text-white text-lg text-3xl font-bold mb-3 flex flex-col items-center">Selected - V</h1>
+    <div  class="bg-black max-h-96 my-3 py-5 text-white">
+      <h1 class=" text-lg text-3xl font-bold mb-3 flex flex-col items-center">Selected - V</h1>
       <hr class="mx-3">
-      <ol class="text-white italic list-decimal text-lg text-2xl ml-10 mt-4 flex flex-col gap-y-3 ">
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
+      <ol id="selected-V" class="text-white italic list-decimal text-lg text-2xl ml-10 mt-4 flex flex-col gap-y-3 ">
+        <!-- <li>Fahad</li>
+        <li>Fahad</li>
+        <li>Fahad</li>
+        <li>Fahad</li>
+        <li>Fahad</li>
+        <li>Messi</li> -->
       </ol>
     </div>
     <!-- list div start -->
@@ -114,12 +112,12 @@
       <hr>
       <div class="flex justify-between">
         <h1 class="text-gray-400 text-lg">Per Player:</h1>
-        <input type="number" class="w-32 border shadow-sm border-slate-300 bg-black">
+        <input id="perPlayerCost" type="number" class="w-32 border shadow-sm border-slate-300 bg-black">
       </div>
-      <button class="text-white bg-red-500 px-12 py-1 hover:text-black" >Calculate</button>
+      <button id="calculateBtn" class="text-white bg-red-500 px-12 py-1 hover:text-black" >Calculate</button>
       <div class="flex justify-between">
         <h1 class="text-gray-400 text-lg">Player Expenses : </h1>
-        <h1 class="text-gray-400 text-lg">$<span>000</span></h1>
+        <h1 class="text-gray-400 text-lg">$<span id="totalExpense">000</span></h1>
       </div>
       <div class="flex justify-between">
         <h1 class="text-gray-400 text-lg">Manager:</h1>
@@ -157,6 +155,7 @@
 
 
   <!-- js file add  -->
+  <script src="js/extra.js"></script>
   <script src="js/assignmnet.js"></script>
 </body>
 </html>
