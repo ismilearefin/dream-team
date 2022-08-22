@@ -4,9 +4,9 @@ let total = [];
 function selectedPlayer(clicked){
   
   const playerName = clicked.parentNode.children[1].innerText ;
-  total.push(playerName);
   
-  if(total.length<6){
+  if(total.length < 5){
+    total.push(playerName);
     const selectedList = document.getElementById('selected-V');
 
   const listIteam = document.createElement('li');
