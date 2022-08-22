@@ -16,19 +16,18 @@ function selectedPlayer(clicked){
     `
     selectedList.appendChild(listIteam);
   }else{
-    const elemnts = document.getElementsByTagName('button');
+    const elemnts = document.querySelectorAll('.btnClass');
+    alert('You cannot select more than 5 players');
     for(let elemet of elemnts){
       elemet.style.background = 'gray';
       elemet.classList.add ('cursor-not-allowed');
     }
   }
-  
 }
 
 document.getElementById('calculateBtn').addEventListener('click', function(){
-
-  let totalCost = document.getElementById('totalExpense');
-  totalCost.innerText = costCalculte(total.length);
+    let totalCost = document.getElementById('totalExpense');
+    totalCost.innerText = costCalculte(total.length);
 })
 
 document.getElementById('calculateTotal').addEventListener('click', function(){
